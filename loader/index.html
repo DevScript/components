@@ -12,22 +12,45 @@
         <div class="shapes">
             <div class="shap2">
                 <svg id=st3>
-                    <rect id="s2" class="square" x="10" y="7" width="90" height="90" fill="" style="fill:transparent;stroke:#2243B6;stroke-width:10"/>
+                    <rect id="s2" class="square" x="10" y="7" width="90" height="90" fill="" style="fill:transparent;stroke:linear-gradient(45deg, red, blue);stroke-width:10"/>
                 </svg>
             </div>
             <div class="shap3">
                 <svg id=st2>
-                    <polygon id="s1" class="triangle" points="60,10 10,90 110,90" fill="" style="fill:transparent;stroke:#FD0E35;stroke-width:10"/>
+                    <polygon id="s1" class="triangle" points="60,10 10,90 110,90" fill="" style="fill:transparent;stroke:linear-gradient(45deg, red, blue);stroke-width:10"/>
                 </svg>
             </div>
             <div class="shap1">
                 <svg id="st1">
-                    <circle id="s8" class="circle" cx="55" cy="55" r="48"  style="fill:transparent;stroke:#299617
+                    <circle id="s8" class="circle" cx="55" cy="55" r="48"  style="fill:transparent;stroke:linear-gradient(45deg, red, blue)
                     ;stroke-width:10;"/>
                 </svg>
             </div>
         </div>
+        <div>
+            <div class="gooeys center">
+                <canvas style="position:absolute;" id="canvas"</canvas>
+              </div>
+              
+              <div class="glow center"></div>
+              <div class="shadow center"></div>
+              <div class="pot-top center"></div>
+              <div class="pot center"></div>
+              
+              
+              
+              <svg>
+                <defs>
+                  <filter id="filter">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 17 -10" result="filter" />
+                    <feBlend/>
+                  </filter>
+                </defs>
+              </svg>
+        </div>
         <div><h1>LOADING...</h1></div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
