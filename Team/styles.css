@@ -176,6 +176,7 @@ i{
     overflow: hidden;
     color: rgb(255, 255, 255);
     font-size: 4rem;
+    border-bottom: 4px solid rgb(255, 0, 179);
   }
   
   .typewriter-effect:after {
