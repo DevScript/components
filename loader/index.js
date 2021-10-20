@@ -83,3 +83,8 @@ window.addEventListener('resize', function(e) {
     W = window.innerWidth;
     H = window.innerHeight;
   }, false);
+
+window.onresize = function(event)
+{
+document.location.reload(true);
+}
