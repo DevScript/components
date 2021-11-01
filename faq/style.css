@@ -1,66 +1,70 @@
-body{
-    font-family: 'Work Sans', sans-serif;
-}
-.faq-heading{
-    border-bottom: #777;
-    padding: 20px 60px;
-}
-.faq-container{
-display: flex;
-justify-content: center;
-flex-direction: column;
-
-}
-.hr-line{
-  width: 90%;
-  margin: auto;
-}
-/* Style the buttons that are used to open and close the faq-page body */
-.faq-page {
-    /* background-color: #eee; */
-    color: #444;
-    cursor: pointer;
-    padding: 30px 20px;
-    width: 90%;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    margin: auto;
-
-}
-.faq-body{
-    margin: auto;
-    /* text-align: center; */
-   width: 90%; 
-   padding: auto;
-   
-}
-
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.faq-page:hover {
-    background-color: #F9F9F9;
-}
-
-/* Style the faq-page panel. Note: hidden by default */
-.faq-body {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
+.row{
+	display: block;
+	margin: 20px;
+	background-color: black;
+	padding-left:9%;
+  }
+  .row:after{
+	content:"";
+	display: table;
+	clear: both;
+  }
+  .column{
+	width:40%;
+	float:left;
+	padding: 0 5%;
+	color:#ed1b76;
+	font-family: Verdana;
+	font-size: 15px;
+	
+	
+  }
+  
+  
+  
+  
+  .faqs-container{
     overflow: hidden;
 }
-
-.faq-page:after {
-    content: '\25B3';
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
+.faq-singular {
+    position: relative;
+    border-bottom: 1px solid #fdcee3;
+    padding: 0 30px 0 20px;
+}
+.faq-singular:hover,
+.faq-singular.active{
+    background: #fdcee3;
+    background-image: linear-gradient(90deg, #037a76 0%, #037a76 8px, transparent 8px, transparent 100%);
+}
+.faq-singular .faq-question {
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    padding: 25px 25px 25px 0px;
+    font-weight: 700;
+    font-size: 24px;
+}
+.faq-singular .faq-question:before {
+    position: absolute;
+    content: "+";
+    color: #037a76;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    font-weight: 700;
+    transition: all .5s;
+}
+.faq-singular.active .faq-question:before {
+    transform: translateY(-50%) rotate(45deg) scale(1.3);
+}
+.faq-answer {
+    display: none;
+    padding-bottom: 20px;
 }
 
-.active:after {
-    content: "\29E0";
-    /* Unicode character for "minus" sign (-) */
-}
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
