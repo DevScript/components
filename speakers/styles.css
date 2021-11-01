@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  column-gap: 10px;
   margin-top:30px;
   margin-bottom:30px;
  }
@@ -104,10 +104,10 @@
   transform:scale(0.7);
 }
 .card-wrap:hover{
-  transform: scale(1);
+  transform: scale(0.8);
 }
 .card-header{
-  height: 180px;
+  height: 150px;
   width: 100%;
   background-color: transparent;
   border-radius:100% 0% 100% 0% / 0% 50% 50% 100%;
@@ -129,13 +129,13 @@
   text-transform: uppercase;
   font-size: 20px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: white;
 }
 .card-text{
   text-align: center;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: white;
 }
 
@@ -149,9 +149,31 @@
 
 @media only screen and (max-width:500px){
 .card-wrap{
-  transform: scale(0.8);
+  width:120px;
+  height:180px;
+  padding:auto;
+  margin:auto;
+}
+.card-header{
+  height:100px;
 }
 .list{
-  gap:10px;
+  gap:0px;
 }
+.card-content{
+  width:85%;
+}
+.card-text{
+  margin:0;
+}
+.card-title{
+  margin:auto;
+  margin-top:8px;
+  margin-bottom: 8px;
+}
+}
+
+
+.text{
+  font-size:2rem;
 }
